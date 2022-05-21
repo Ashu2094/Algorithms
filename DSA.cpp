@@ -22,7 +22,7 @@ void printgraph(list<int>vect[],int Vertex)
 void dfs(int v,bool visited[],list<int>vect[])
 {
     visited[v]=true;
-    alreadystack[v]=true;;
+    
     for(auto x:vect[v])
     {
         
@@ -30,7 +30,7 @@ void dfs(int v,bool visited[],list<int>vect[])
         {
             for(auto y:vect[x])
             {
-                if(visited[y]==true&&alreadystack[y]==true&&y!=v)
+                if(visited[y]==true&&y!=v)
                 cycle=1;
             }
             dfs(x,visited,vect);
