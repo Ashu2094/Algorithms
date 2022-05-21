@@ -39,6 +39,7 @@ void dfs(int v,bool visited[],list<int>vect[])
             dfs(x,visited,vect);
         }
     }
+    alreadystack[v]=false;
 }
 int main()
 {
